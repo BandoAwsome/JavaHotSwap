@@ -27,7 +27,7 @@ public class JavaAgent {
         // 获得所有已被装载的class文件
         Class[] classes = inst.getAllLoadedClasses();
         for (Class clazz : classes) {
-            if (clazz.getName().equalsIgnoreCase("com.jason.Excample")) {
+            if (clazz.getName().equalsIgnoreCase(agentArgs)) {
                 inst.addTransformer(new ClassFileTransformer() {
                     /**
                      * 修改字节文件的逻辑点
@@ -42,7 +42,7 @@ public class JavaAgent {
                     @Override
                     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
                         System.out.println("hotswap class name :" + className);
-                        byte[] bytes = fileToBytes(new File("C:\\Users\\zhuzhenhao\\Desktop\\Excample.class"));
+                        byte[] bytes = fileToBytes(new File("C:\\Users\\zhuzhenhao\\Desktop\\Example.class"));
                         return bytes;
                     }
                 }, true);

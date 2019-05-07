@@ -9,7 +9,7 @@ package com.jason;
 public class Main {
 
     public static void main(String[] args) {
-        final Excample excample = new Excample();
+        final Example excample = new Example();
         new Thread() {
             @Override
             public void run() {

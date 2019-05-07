@@ -6,7 +6,7 @@ package com.jason;
  * @version 1.0.0
  * @date 2019/5/6 16:41
  */
-public class Excample {
+public class Example {
 
     /**
      * 简单累加

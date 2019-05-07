@@ -20,7 +20,7 @@ public class HotSwap {
                     VirtualMachine virtualMachine = null;
                     virtualMachine = VirtualMachine.attach(vmd.id());
                     // 获得代理类位置 + 传递参数
-                    virtualMachine.loadAgent("E:\\agentmain.jar", "cxs");
+                    virtualMachine.loadAgent("E:\\agentmain.jar", "com.jason.Example");
                     virtualMachine.detach();
             }
         } catch (AttachNotSupportedException e) {
